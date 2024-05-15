@@ -1,0 +1,116 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+body{
+    margin:0;
+    padding:0;
+    background-color:#B9D9EB;
+}
+.gameContainer{
+    text-align:center;
+    margin-left: 150px;
+    margin-top: 50px;
+    display:flex;
+}
+nav ul li{
+    list-style-type:none;
+}
+nav{
+    background-color:#002244;
+    margin-top:0;
+    padding: 5px;
+    color: white;
+    font-size:20px;
+}
+.container{
+    display:grid;
+    grid-template-columns: repeat(3,10vw);
+    grid-template-rows: repeat(3,10vw);
+    font-family:'Roboto',sans-serif;
+}
+.box{
+    border: 2px solid black;
+    font-size:8vw;
+    cursor:pointer;
+    display:flex;
+    justify-content:center;
+    align-items:center; 
+}
+.container div:hover{
+    background-color:#F0F8FF;
+}
+.gameInfo{
+    font-size: 50px;
+}
+.gameInfo h2{
+    font-size: 5rem;
+    margin-left:0px;
+}
+.imgbox img{
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+.line{
+    background-color: black;
+    height: 3px;
+    width: 0;
+    position: absolute;
+    background-color: #911d91;
+    transition: width 1s ease-in-out;
+}
+.br-0{
+    border-right:0;
+}
+.bl-0{
+    border-left:0;
+}
+.bt-0{
+    border-top:0;
+}
+.bb-0{
+    border-bottom:0;
+}
+.reset{
+    padding:10px;
+    margin-left:20px;
+    margin-bottom:20px;
+    border-radius:5px;
+}
+.reset:hover{
+    color:white;
+    background-color: #002244;
+}
+
+@media screen and (max-width: 905px)
+{
+    .gameContainer{
+        flex-wrap: wrap;
+        margin-left:20%;
+    }
+    .gameInfo{
+        margin-top: 34px;
+    }
+    .gameInfo h2{
+        font-size: 2rem;
+        margin-right:15%;
+        margin-left:1px;
+        
+    }
+    .container { 
+        grid-template-rows: repeat(3, 20vw);
+        grid-template-columns: repeat(3, 20vw);
+    }
+    .gameInfo div{
+        font-size:1.5rem;
+        margin-top: 0;
+        align-items:center;
+        text-align:center;
+    }
+    .imgbox {
+        align-items:center;
+        margin-right:55px;
+        }
+        .imgbox img{
+            width:auto;
+            height:auto;
+        }
+}
